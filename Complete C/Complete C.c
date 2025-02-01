@@ -78,13 +78,13 @@ void Pattern1(int);                       // F8
 int cbv_change(int);                      // F9
 int cbf_change(int *);                    // F10
 void Swap(int *, int *);                  // F11
-void print_array(int, int);               // F12
-void ReverseArray(int, int);              // F13
-int PositiveCounter(int, int);            // F14
-void x_arr(int, int, int, int);           // F15
-int Strlen(char);                         // F16
-void Slice(char, int, int);               // F17
-void Strcpy(char, char);                  // F18
+void print_array(int[], int);             // F12
+void ReverseArray(int[], int);            // F13
+int PositiveCounter(int[], int);          // F14
+void x_arr(int l, int a[][10], int t[]);  // F15
+int Strlen(char[]);                       // F16
+void Slice(char[], int, int);             // F17
+void Strcpy(char[], char[]);              // F18
 void display_structure(struct Student s); // F19
 void sumVector(vec v1, vec v2);           // F20
 int CompareDates(date d1, date d2);       // F21
