@@ -118,3 +118,21 @@ int main() {
     // getch();
     return 0;
 }*/
+
+/*#include <stdio.h>
+
+int main() {
+    int x = 10, y = 6;
+    {
+        x = 2;
+        printf("%d\n",x);
+        printf("%d\n",y);
+    }
+    {
+        y = 4;
+        printf("%d\n",x);
+        printf("%d\n",y);
+    }
+
+    return 0;
+}*/
