@@ -3,6 +3,7 @@
 // * THIS CODE IS NOT COMPLETE YET, IT HAS MANY FLAWS BUT YESSS IT WILL WORK JUST PERFECTLY FOR SOME BASIC INFIX EXPRESSIONS
 // * THE FLAWS ARE THERE ONLY BECAUSE I WAS ALSO TRYING TO DO THE CONVERSION ALONG WITH THE FORMATTED OUTPUT
 // * AND THE MAIN REASON IS THAT I AM ACTUALLY OUT OF TIME 😅
+// * Solved ✅
 
 #include <stdio.h>
 #include <conio.h>
@@ -86,7 +87,7 @@ int main()
         // for operators: Push it onto the stack or print is as the postfix expression as per the condition and the rule of conversion
         else if (infix[i] == '+' || infix[i] == '-' || infix[i] == '*' || infix[i] == '/')
         {
-            if (priority(stack[top]) >= priority(infix[i]))
+            while (priority(stack[top]) >= priority(infix[i]))
             {
                 postfix[index++] = pop();
                 printf("%-30s", postfix);
@@ -116,7 +117,13 @@ int main()
 
         printf("\n\n");
     }
-    printf("The final postfix expression is: %s", postfix);
+    while (top != -1)
+    {
+        postfix[index++] = pop();
+        printf("%-30s", postfix);
+    }
+
+    printf("\n\nThe final postfix expression is: %s", postfix);
 
     return 0;
 }
