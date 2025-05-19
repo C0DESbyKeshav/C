@@ -41,7 +41,7 @@ int priority(char c)
         return 0;
     else if (c == '+' || c == '-')
         return 1;
-    else if (c == '*' || c == '/')
+    else if (c == '*' || c == '/' || c == '%')
         return 2;
     return 0;
 }
@@ -85,7 +85,7 @@ int main()
         }
 
         // for operators: Push it onto the stack or print is as the postfix expression as per the condition and the rule of conversion
-        else if (infix[i] == '+' || infix[i] == '-' || infix[i] == '*' || infix[i] == '/')
+        else if (infix[i] == '+' || infix[i] == '-' || infix[i] == '*' || infix[i] == '/' || infix[i] == '%')
         {
             while (priority(stack[top]) >= priority(infix[i]))
             {
